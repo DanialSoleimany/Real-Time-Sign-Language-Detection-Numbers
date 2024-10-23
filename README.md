@@ -15,7 +15,12 @@ This project demonstrates real-time detection of sign language numbers (0-9) usi
 
 <p align="center">
   <b>Demo Video</b>
-  [![Watch the video](https://img.youtube.com/vi/Krw_WpgB-X8/0.jpg)](https://youtu.be/Krw_WpgB-X8)
+</p>
+
+<p align="center">
+  <a href="https://youtu.be/Krw_WpgB-X8">
+    <img src="https://img.youtube.com/vi/Krw_WpgB-X8/0.jpg" alt="Watch the video" />
+  </a>
 </p>
 
 ## Table of Contents
