@@ -1,3 +1,5 @@
+
+
 # Real-Time Sign Language Detection
 
 ## Overview
@@ -45,17 +47,17 @@ pip install mediapipe==0.10.14 opencv-python==4.10.0 scikit-learn==1.5.2
 ```
 
 ## Dataset
-I collected the dataset using my webcam, generating 1000 images for each class (numbers 0-9) using the `collect_images` module. Then, I processed these images with the `create_dataset` module to extract x and y coordinates from hand estimation landmarks. Each landmark array was labeled with the respective number and saved as a pickle file.
+I collected the dataset using my webcam, generating 1000 images for each class (numbers 0-9) using the [`collect_images`](https://github.com/DanialSoleimany/Real-Time-Sign-Language-Detection-Numbers/blob/main/collect_images.ipynb) module. Then, I processed these images with the [`create_dataset`](https://github.com/DanialSoleimany/Real-Time-Sign-Language-Detection-Numbers/blob/main/create_dataset.ipynb) module to extract x and y coordinates from hand estimation landmarks. Each landmark array was labeled with the respective number and saved as a pickle file.
 
 One of the main challenges in creating the dataset was ensuring accurate predictions for different hand orientations, distances from the webcam, and positions in the frame. I handled this challenge by capturing diverse images in various conditions, but the model's accuracy can still improve with more frames at different distances and positions.
 
 The complete dataset is around 6GB, so it's not uploaded here, but you can collect your own dataset using the aforementioned modules.
 
 ## Model
-The machine learning model used is a Random Forest classifier, which achieved over 99% accuracy. The model was trained using the `train_classifier` module on the extracted coordinates from hand landmarks, and the trained model is saved as a `.p` file for future predictions.
+The machine learning model used is a Random Forest classifier, which achieved over 99% accuracy. The model was trained using the [`train_classifier`](https://github.com/DanialSoleimany/Real-Time-Sign-Language-Detection-Numbers/blob/main/train_classifier.ipynb) module on the extracted coordinates from hand landmarks, and the trained model is saved as a `.p` file for future predictions.
 
 ## Usage
-To use the system, run the `main.py` script. The script captures video from your webcam, uses MediaPipe for hand pose estimation, and passes the extracted landmarks' coordinates to the saved Random Forest model. The model predicts the number based on the hand gestures, displaying the result on a box around the hand.
+To use the system, run the [`main.py`](https://github.com/DanialSoleimany/Real-Time-Sign-Language-Detection-Numbers/blob/main/main.ipynb) script. The script captures video from your webcam, uses MediaPipe for hand pose estimation, and passes the extracted landmarks' coordinates to the saved Random Forest model. The model predicts the number based on the hand gestures, displaying the result on a box around the hand.
 
 ```bash
 python main.py
@@ -65,3 +67,5 @@ The system predicts numbers in real time, showing a number from 0-9 based on you
 
 ## License
 This project is licensed under the MIT License. Feel free to use it in your projects or contribute to improve it.
+
+---
