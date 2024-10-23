@@ -57,11 +57,7 @@ The complete dataset is around 6GB, so it's not uploaded here, but you can colle
 The machine learning model used is a Random Forest classifier, which achieved over 99% accuracy. The model was trained using the [`train_classifier`](https://github.com/DanialSoleimany/Real-Time-Sign-Language-Detection-Numbers/blob/main/train_classifier.ipynb) module on the extracted coordinates from hand landmarks, and the trained model is saved as a `.p` file for future predictions.
 
 ## Usage
-To use the system, run the [`main.py`](https://github.com/DanialSoleimany/Real-Time-Sign-Language-Detection-Numbers/blob/main/main.ipynb) script. The script captures video from your webcam, uses MediaPipe for hand pose estimation, and passes the extracted landmarks' coordinates to the saved Random Forest model. The model predicts the number based on the hand gestures, displaying the result on a box around the hand.
-
-```bash
-python main.py
-```
+To use the system, run the [`main.ipynb`](https://github.com/DanialSoleimany/Real-Time-Sign-Language-Detection-Numbers/blob/main/main.ipynb) script. The script captures video from your webcam, uses MediaPipe for hand pose estimation, and passes the extracted landmarks' coordinates to the saved Random Forest model. The model predicts the number based on the hand gestures, displaying the result on a box around the hand.
 
 The system predicts numbers in real time, showing a number from 0-9 based on your hand gesture and position in each frame.
 
